@@ -121,6 +121,8 @@ $totalRows_Recordset1 = mysql_num_rows($Recordset1);
 <title>Personal Store</title>
 <link rel="shortcut icon" href="favicon.ico">
 <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+ <script src="js/gera_pedido.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -132,6 +134,7 @@ $totalRows_Recordset1 = mysql_num_rows($Recordset1);
   <?php if(isset($_GET["ps"])) include($_GET["ps"].".php"); else include ("home.php");?>
   </div>
 </div>
+
 </body>
 </html>
 <?php
