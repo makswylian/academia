@@ -1,0 +1,214 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*BODY*/
+body {
+	position:absolute;
+	width:100%;
+	height:100%;
+	margin:0px;
+	border:0px;
+	background:url(../images/bg.jpg) top;
+}
+body a img{
+	border-width:0;
+}
+input:focus {
+  outline:none;
+}
+textarea:focus{
+ outline:none;
+}
+
+/*LOGIN*/
+.login {
+	position:absolute;
+	width:100%;
+	height:140px;
+	top:50%;
+	margin-top:-100px;
+	background:#961515 url(../images/login_bg.jpg);
+}
+.login_form {
+	position:absolute;
+	width:180px;
+	left:50%;
+	margin-left:-90px;
+	top:15px;
+}
+.login_campo {
+	width:180px;
+	height:26px;
+}
+.login_campo input {
+	width:180px;
+	height:24px;
+	border:0px;
+	color:#620f0f;
+	padding:5px 0px 0px 8px;
+	background:url(../images/login_input.png) no-repeat;
+}
+.login_bt {
+	width:58px;
+	height:22px;
+}
+.login_bt input {
+	position: absolute;
+	right:0px;
+	bottom:2px;
+	width:58px;
+	height:22px;
+	cursor:pointer;
+	border:0px;
+	background: url(../images/login_bt.png) no-repeat;
+}
+
+.cadastrar_btn input {
+	position: absolute;
+	right:0px;
+	background: url(../images/cadastrar_btn.png) no-repeat;
+}
+.bemvindo {
+	position:absolute;
+	right:70px;
+	top:40px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+.bemvindo a:link {
+	color:#666;
+	text-decoration:none;
+}
+.bemvindo a:visited {
+	text-decoration:none;
+	color:#666;
+}
+.bemvindo a:hover {
+	text-decoration:none;
+	color:#000;
+}
+.bemvindo a:active {
+	color:#666;
+	text-decoration:none;
+}
+
+/*LOGO*/
+.logo {
+	position:absolute;
+	left:50%;
+	margin-left:-100px;
+	top:-155px;
+}
+
+/*CONTEUDO*/
+.conteudo {
+	position:absolute;
+	width:900px;
+	left:50%;
+	margin-left:-450px;
+}
+
+.conteudo_menu {
+	position:relative;
+        float: left;
+        margin-left: 30px;
+	top:13px;
+	z-index:2;
+}
+
+.conteudo_logo {
+	position:relative;
+        float: left;
+	top:10px;
+}
+
+.conteudo_central {
+	position: absolute;
+	left:0px;
+	top:150px;
+	z-index:1;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-align:justify;
+}
+
+.bt {
+	width:60px;
+	height:20px;
+	background:url(../images/input_bt.png) no-repeat;
+	font-size:9px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FFF;
+	text-align:center;
+}
+.bt a:link {
+	color:#FFF;
+	text-decoration:none;
+}
+.bt a:visited {
+	text-decoration:none;
+	color:#FFF;
+}
+.bt a:hover {
+	text-decoration:none;
+	color:#FFF;
+}
+.bt a:active {
+	color:#FFF;
+	text-decoration:none;
+}
+
+/*FORM*/
+.form_bt {
+	width:60px;
+	height:20px;
+}
+.form_bt input{
+	width:60px;
+	height:20px;
+	border:0px;
+	background:url(../images/input_bt.png) no-repeat;
+	color:#FFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	cursor:pointer;
+}
+
+.form_textarea {
+	width:900px;
+	height:300px;
+	background:#f2f2f2;
+}
+.form_textarea textarea {
+	width:900px;
+	height:300px;
+	background:#f2f2f2;
+	text-align:justify;
+	border:#000 solid;
+	overflow:auto;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333;
+}
+
+.form_input {
+	width:300px;
+	height:15px;
+}
+.form_input input {
+	width:300px;
+	height:15px;
+	background:#f2f2f2;
+	border:#000 solid;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color: #333;
+}
+table {
+    position: relative;
+    width: 100%;
+}
+table .titulo {
+    color: #fff;
+    background: #961515;
+}
