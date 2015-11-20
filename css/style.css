@@ -54,7 +54,7 @@ textarea:focus{
 }
 .login_bt input {
 	position: absolute;
-	right:0px;
+	right:110px;
 	bottom:2px;
 	width:58px;
 	height:22px;

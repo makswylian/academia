@@ -88,9 +88,6 @@ if (isset($_POST['usuario'])) {
   <form id="form1" name="form1" method="POST" action="<?php echo $loginFormAction; ?>" class="login_form">
   <table border="0" cellspacing="3" cellpadding="0">
   <tr>
-    <td align="center" valign="top"><img src="images/login_titulo.png" width="146" height="11" /></td>
-  </tr>
-  <tr>
     <td class="login_campo"><label>
       <input name="usuario" type="text" id="usuario" onfocus="if(this.value == 'Usuario') this.value = ''" value="Usuario" maxlength="23" />
     </label></td>

@@ -54,7 +54,7 @@
     <div class="dropdown_2columns align_right">
      <div class="col_1">
       <ul class="simple">
-       <li><a href="#">Gerar</a></li>
+       <li><a href="?ps=gera_pedido">Gerar</a></li>
        <li><a href="#">Editar </a></li>
       </ul>
      </div>   
