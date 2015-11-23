@@ -5,19 +5,19 @@
         </tr>
         <tr>
             <td><label>Nome: </label></td>
-            <td><input type="text" name="nome" value=""></td>
+            <td><input type="text" name="nome" value="" maxlength="35"></td>
         </tr>
         <tr>
             <td><label>Email: </label></td>
-            <td><input type="text" name="email" value=""></td>
+            <td><input type="text" name="email" value="" maxlength="35"></td>
         </tr>
         <tr>
             <td><label>Usuario: </label></td>
-            <td><input type="text" name="usuario" value=""></td>
+            <td><input type="text" name="usuario" value="" maxlength="20"></td>
         </tr>
         <tr>
             <td><label>Senha: </label></td>
-            <td><input type="password" name="senha" value=""></td>
+            <td><input type="password" name="senha" value="" maxlength="20"></td>
 
         </tr>
     </table>

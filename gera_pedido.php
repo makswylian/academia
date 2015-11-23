@@ -5,26 +5,26 @@
         </tr>
         <tr>
             <td><label>Códido do Funcionário: </label></td>
-            <td><input type="int" name="idfunc" value=""></td>
+            <td><input type="int" name="idfunc" value="" maxlength="20"></td>
         </tr>
         <tr>
             <td><label>Códido Cliente: </label></td>
-            <td><input type="int" name="idcliente" value=""></td>
+            <td><input type="int" name="idcliente" value="" maxlength="20"></td>
         </tr>
         <tr>
             <td><label>Valor Unitário: </label></td>
-            <td><input id="vlr_unit" type="text" name="vlruni" value=""></td>
+            <td><input id="vlr_unit" type="text" name="vlruni" value="" maxlength="20"></td>
         </tr>
         <tr>
             <td><label>Quantidade </label></td>
-            <td><input id="quantidade" type="text" name="qntd" value="" onblur="setarTotal()" ></td>
+            <td><input id="quantidade" type="text" name="qntd" value="" onblur="setarTotal()" maxlength="20"></td>
         <tr>
             <td><label>Valor Total </label></td>
             <td><input id="vlr_total" type="text" name="obs" value="0,00" disabled></td>
         </tr>
         <tr>
             <td><label>Descrição: </label></td>
-            <td><input type="int" name="descc" value=""></td>
+            <td><input type="int" name="descc" value="" maxlength="40"></td>
         </tr>
         <tr>
             <td><label>Data do Pedido: </label></td>

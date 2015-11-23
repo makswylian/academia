@@ -54,7 +54,7 @@ textarea:focus{
 }
 .login_bt input {
 	position: absolute;
-	right:110px;
+	right:131px;
 	bottom:2px;
 	width:58px;
 	height:22px;
@@ -70,7 +70,7 @@ textarea:focus{
 }
 .bemvindo {
 	position:absolute;
-	right:70px;
+	right:-80px;
 	top:40px;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:12px;
@@ -111,8 +111,8 @@ textarea:focus{
 .conteudo_menu {
 	position:relative;
         float: left;
-        margin-left: 30px;
-	top:13px;
+        margin-left: 0px;
+	top:70px;
 	z-index:2;
 }
 
