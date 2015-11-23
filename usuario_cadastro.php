@@ -29,6 +29,14 @@ if (!$isAdmin) {
             <td><input type="password" name="senha" value="" maxlength="20"></td>
 
         </tr>
+        <tr>
+            <td><label>Nivel de acesso: </label></td>
+            <td>
+                <input type="radio" name="nivel_acesso" value="0">Administrador
+                <input type="radio" name="nivel_acesso" value="1">Usuário Comum
+            </td>
+
+        </tr>
     </table>
     <input type="submit" id="button1" value="Cadastrar"   />
 </form>
