@@ -1,3 +1,12 @@
+<?php
+$isAdmin = $_SESSION['is_admin'] == "1" ? TRUE : FALSE;
+
+if (!$isAdmin) {
+    header('home.php');
+    exit();
+}
+?>
+
 <form name="form_user" method="post" action="?ps=usuario_cadastro">
     <table>
         <tr>
@@ -23,6 +32,7 @@
     </table>
     <input type="submit" id="button1" value="Cadastrar"   />
 </form>
+
 
 <?php
 if (isset($_POST) && count($_POST) > 0) {

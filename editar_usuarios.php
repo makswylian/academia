@@ -1,4 +1,4 @@
-<form name="form_user" method="post" action="?ps=editar_user">
+<form name="form_user" method="post" action="?ps=editar_usuarios">
     <table>  
         <tr>
             <td class="titulo" colspan="2" align="center">EDITAR USUÁRIOS</td>

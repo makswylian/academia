@@ -1,5 +1,11 @@
 <?php require_once('classe/academiaconexao.php'); ?>
 <?php
+
+session_start();
+
+//$_SESSION['is_admin'] = $usuario['nivel']=="1"?TRUE:FALSE;
+$_SESSION['is_admin'] = "1";
+
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
 {
