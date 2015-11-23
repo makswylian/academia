@@ -1,7 +1,10 @@
 <form name="form_user" method="post" action="?ps=editar_user">
-    <table>     
+    <table>  
         <tr>
-            <td>Login</td>
+            <td class="titulo" colspan="2" align="center">EDITAR USUÁRIOS</td>
+        </tr>
+        <tr>
+            <td><label>Login: </label></td>
             <td><input name="login" type="text" id="login" maxlength="40" class="textBox" /></td>
         </tr>
         <tr>
