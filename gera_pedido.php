@@ -1,7 +1,7 @@
 <form name="form_user" method="post" action="?ps=gera_pedido">
     <table>
         <tr>
-            <td class="titulo" colspan="2" align="center">GERAR PEDIDIO</td>
+            <td class="titulo" colspan="2" align="center">GERAR PEDIDO</td>
         </tr>
         <tr>
             <td><label>Códido do Funcionário: </label></td>
@@ -16,10 +16,10 @@
             <td><input id="vlr_unit" type="text" name="vlruni" value="" maxlength="20"></td>
         </tr>
         <tr>
-            <td><label>Quantidade </label></td>
+            <td><label>Quantidade: </label></td>
             <td><input id="quantidade" type="text" name="qntd" value="" onblur="setarTotal()" maxlength="20"></td>
         <tr>
-            <td><label>Valor Total </label></td>
+            <td><label>Valor Total: </label></td>
             <td><input id="vlr_total" type="text" name="obs" value="0,00" disabled></td>
         </tr>
         <tr>
