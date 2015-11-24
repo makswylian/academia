@@ -1,5 +1,5 @@
 <?php
-$isAdmin = $_SESSION['is_admin'] == "1" ? TRUE : FALSE;
+$isAdmin = $_SESSION['nivel'] == "0" ? TRUE : FALSE;
 
 if (!$isAdmin) {
     header('home.php');
@@ -32,8 +32,8 @@ if (!$isAdmin) {
         <tr>
             <td><label>Nivel de acesso: </label></td>
             <td>
-                <input type="radio" name="nivel_acesso" value="0">Administrador
-                <input type="radio" name="nivel_acesso" value="1">Usuário Comum
+                <input type="radio" name="nivel" value="0">Administrador
+                <input type="radio" name="nivel" value="1">Usuário Comum
             </td>
 
         </tr>
@@ -49,7 +49,8 @@ if (isset($_POST) && count($_POST) > 0) {
     $salva_email = $_POST['email'];
     $salva_usuario = $_POST['usuario'];
     $salva_senha = $_POST['senha'];
-
+    $salva_nivel = $_POST ['nivel'];
+    
 //Validar valores vazio.
     if (trim($salva_nome) == "") {
         echo 'Sem Nome.';
@@ -64,8 +65,8 @@ if (isset($_POST) && count($_POST) > 0) {
         return;
     }
 
-    $sql_gravar = mysql_query("INSERT INTO usuario (nome, email, usuario, senha) "
-            . "value ('$salva_nome','$salva_email','$salva_usuario','$salva_senha')");
+    $sql_gravar = mysql_query("INSERT INTO usuario (nome, email, usuario, senha, nivel) "
+            . "value ('$salva_nome','$salva_email','$salva_usuario','$salva_senha','$salva_nivel')");
 }
 ?>
 
