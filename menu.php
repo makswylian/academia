@@ -36,7 +36,7 @@
             </div>   
         </div> 
     </li>
-    <li><a href="#" class="drop">FUNCIONÁRIO</a>
+<!--    <li><a href="#" class="drop">FUNCIONÁRIO</a>
         <div class="dropdown_2columns">
             <div class="col_1">
                 <ul class="simple">
@@ -46,7 +46,7 @@
                 </ul>
             </div>   
         </div> 
-    </li>
+    </li>-->
 
     <li><a href="#" class="drop">CLIENTE</a>
         <div class="dropdown_2columns">
