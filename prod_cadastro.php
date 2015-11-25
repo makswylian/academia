@@ -21,7 +21,7 @@
         <tr>
         <tr>
             <td><label>Tamanho: </label></td>
-            <td><input id="" type="text" name="tamanho" value="" disabled></td>
+            <td><input id="" type="text" name="tamanho" value="" maxlength="20"></td>
         </tr>
         <tr>
             <td><label>Tipo: </label></td>
