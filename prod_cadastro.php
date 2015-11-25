@@ -35,9 +35,9 @@
             <td><label>Valor Unitário: </label></td>
             <td><input type="int" name="valoruni" value="" maxlength="40"></td>
         </tr>
-        
+
     </table>
-    <input type="submit" id="button" value="Cadastrar"/>
+    <input type="submit" id="button3" value="Cadastrar"/>
 </form>
 
 <?php
