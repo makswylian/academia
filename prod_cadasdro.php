@@ -4,8 +4,8 @@
             <td class="titulo" colspan="2" align="center">CADASTRAR PRODUTO</td>
         </tr>
         <tr>
-            <td><label>Códido do Produto: </label></td>
-            <td><input type="int" name="idproduto" value="" maxlength="20"></td>
+            <td><label>Nome: </label></td>
+            <td><input type="int" name="nome" value="" maxlength="20"></td>
         </tr>
         <tr>
             <td><label>Códido Fornecedor: </label></td>
@@ -44,29 +44,36 @@
 if (isset($_POST) && count($_POST) > 0) {
 
     $salva_nome = $_POST['nome'];
-    $salva_dtnasc = $_POST['dtnasc'];
-    $salva_telefone = $_POST['telefone'];
-    $salva_email = $_POST['email'];
-    $salva_obs = $_POST['obs'];
+    $salva_idforn = $_POST['idforn'];
+    $salva_data = $_POST['data'];
+    $salva_descricao = $_POST['descricao'];
+    $salva_tamanho = $_POST['tamanho'];
+    $salva_tipo = $_POST['tipo'];
+    $salva_peso = $_POST['peso'];
+    $salva_valoruni = $_POST['valoruni'];
     //Validar valores vazio.
     if (trim($salva_nome) == "") {
         echo 'Sem Nome.';
         return;
     }
-    if (trim($salva_dtnasc) == "") {
-        echo 'Sem Data de Nascimento.';
+    if (trim($salva_idforn) == "") {
+        echo 'Sem Código do Fornecedor.';
         return;
     }
-    if (trim($salva_telefone) == "") {
-        echo 'Sem Telefone.';
+    if (trim($salva_data) == "") {
+        echo 'Sem Data de Validade.';
         return;
     }
-    if (trim($salva_email) == "") {
-        echo 'Sem Email.';
+    if (trim($salva_valoruni) == "") {
+        echo 'Sem Valor Unitário.';
+        return;
+    }
+    if (trim($salva_descricao) == "") {
+        echo 'Sem Descrição.';
         return;
     }
 
-    $sql_gravar = mysql_query("INSERT INTO cliente (nome, dtnasc, fone, email, obs) "
-            . "value ('$salva_nome','$salva_dtnasc','$salva_telefone','$salva_email','$salva_obs')");
+    $sql_gravar = mysql_query("INSERT INTO pedido (nome, idfornecedor, data, descricao, tamanho, tipo, peso, valoruni) "
+            . "value ('$salva_nome','$salva_idforn','$salva_data','$salva_descricao','$salva_tamanho','$salva_tipo','$salva_peso','$salva_valoruni')");
 }
 ?>

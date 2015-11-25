@@ -4,8 +4,8 @@
             <td class="titulo" colspan="2" align="center">GERAR PEDIDO</td>
         </tr>
         <tr>
-            <td><label>Códido do Funcionário: </label></td>
-            <td><input type="int" name="idfunc" value="" maxlength="20"></td>
+            <td><label>Códido do Usuário: </label></td>
+            <td><input type="int" name="iduser" value="" maxlength="20"></td>
         </tr>
         <tr>
             <td><label>Códido Cliente: </label></td>
