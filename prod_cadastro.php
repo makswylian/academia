@@ -73,7 +73,7 @@ if (isset($_POST) && count($_POST) > 0) {
         return;
     }
 
-    $sql_gravar = mysql_query("INSERT INTO pedido (nome, idfornecedor, data, descricao, tamanho, tipo, peso, valoruni) "
+    $sql_gravar = mysql_query("INSERT INTO produtos (nome, idfornecedor, data, descricao, tamanho, tipo, peso, valoruni) "
             . "value ('$salva_nome','$salva_idforn','$salva_data','$salva_descricao','$salva_tamanho','$salva_tipo','$salva_peso','$salva_valoruni')");
 }
 ?>
