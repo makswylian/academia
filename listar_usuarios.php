@@ -3,33 +3,37 @@ include_once('classe/AcademiaDao.php');
 
 $usuarios = new AcademiaDao();
 $usuarios = $usuarios->getUsuarios();
-
-foreach ($usuarios as $value) {
-    echo $value["nome"] . "<br>";
-}
-
-
 ?>
 
-
-<table>  
-    <th>
-        Usuário
-    </th>
-    <th>
-        Nome
-    </th>
-    <th>
-        Email
-    </th>
-    <th>
-        Nivel
-    </th>
+<table>
     <tr>
-        <td>U</td>
-        <td>U</td>
-        <td>U</td>
-        <td>U</td>
+            <td class="titulo" colspan="4" align="center">Usuários</td>
+        </tr>
+    <tr>
+        <th>
+            Usuário               
+        </th>
+        <th>
+            Nome             
+        </th>
+        <th>
+            Email            
+        </th>
+        <th>
+            Nivel              
+        </th>
     </tr>
+    <?php foreach ($usuarios as $value) { ?>
+        <tr>        
+            <td><?= $value["nome"] ?></td>
+            <td><?= $value["usuario"] ?></td>
+            <td><?= $value["email"] ?></td>
+            <td><?= $value["nivel"] ?></td>  
+        </tr>
+    <?php } ?>
+
+
 </table>
+
+
 
