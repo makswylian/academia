@@ -31,7 +31,7 @@
                 <ul class="simple">
                     <li><a href="?ps=usuario_cadastro">Cadastro</a></li>
                     <li><a href="?ps=editar_usuarios">Editar</a></li>
-                    <li><a href="#">Consultas</a></li>
+                    <li><a href="?ps=listar_usuarios">Consultas</a></li>
                 </ul>
             </div>   
         </div> 

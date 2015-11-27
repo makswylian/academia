@@ -5,7 +5,7 @@ $usuarios = new AcademiaDao();
 $usuarios = $usuarios->getUsuarios();
 ?>
 
-<table>
+<table action="?ps=listar_usuarios"> 
     <tr>
             <td class="titulo" colspan="4" align="center">Usuários</td>
         </tr>
