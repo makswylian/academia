@@ -24,7 +24,7 @@ class AcademiaDao {
 
         $re = mysql_query("select * from usuario order by iduser");
 
-        if (mysql_erro() != 0) {
+        if (mysql_errno() != 0) {
             return NULL;
         }
 
@@ -34,17 +34,6 @@ class AcademiaDao {
 
         mysql_close();
         return $retorno;
-    }
-
-    function getId() {
-        $re = mysql_query("select * from usuario where iduser = $id");
-
-        if (mysql_erro() != 0) {
-            return NULL;
-        }
-        while ($l = mysql_fetch_array($re)) {
-            $retorno[] = $l;
-        }
     }
 
 }
