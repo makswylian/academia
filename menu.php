@@ -30,23 +30,11 @@
             <div class="col_1">
                 <ul class="simple">
                     <li><a href="?ps=usuario_cadastro">Cadastro</a></li>
-                    <li><a href="?ps=editar_usuarios">Editar</a></li>
                     <li><a href="?ps=listar_usuarios">Consultas</a></li>
                 </ul>
             </div>   
         </div> 
     </li>
-<!--    <li><a href="#" class="drop">FUNCIONÁRIO</a>
-        <div class="dropdown_2columns">
-            <div class="col_1">
-                <ul class="simple">
-                    <li><a href="#">Cadastro</a></li>
-                    <li><a href="#">Editar</a></li>
-                    <li><a href="#">Consultas</a></li>
-                </ul>
-            </div>   
-        </div> 
-    </li>-->
 
     <li><a href="#" class="drop">CLIENTE</a>
         <div class="dropdown_2columns">

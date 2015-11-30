@@ -22,6 +22,8 @@ $usuarios = $usuarios->getUsuarios();
         <th>
             Nivel              
         </th>
+        
+        <th>Editar</th>
     </tr>
     <?php foreach ($usuarios as $value) { ?>
         <tr>        
@@ -29,6 +31,7 @@ $usuarios = $usuarios->getUsuarios();
             <td><?= $value["usuario"] ?></td>
             <td><?= $value["email"] ?></td>
             <td><?= $value["nivel"] ?></td>  
+            <td><a href="#" class="ion-edit"></a></td>
         </tr>
     <?php } ?>
 
