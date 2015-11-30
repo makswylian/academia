@@ -34,7 +34,7 @@ $usuarios = $usuarios->getUsuarios();
                 <td><?= $value["nome"] ?></td>
                 <td><?= $value["usuario"] ?></td>
                 <td><?= $value["email"] ?></td>
-                <td><?= $value["nivel"] ?></td>  
+                <td><?= $value["nivel"] ?></td>
                 <td><a href="?ps=usuario_editar&iduser=<?= $value["iduser"] ?>"  class="ion-edit"></a></td>
             </tr>
         <?php } ?>

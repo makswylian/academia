@@ -35,5 +35,20 @@ class AcademiaDao {
         mysql_close();
         return $retorno;
     }
+    function getIduser($id) {
+
+        $re = mysql_query("select * from usuario where iduser = $id");	
+
+        if (mysql_errno() != 0) {
+            return NULL;
+        }
+
+        while ($l = mysql_fetch_array($re)) {
+            $retorno[] = $l;
+        }
+
+        mysql_close();
+        return $retorno[0];
+    }
 
 }
