@@ -2,43 +2,49 @@
 
 class AcademiaDao {
 
-private $hostname;
-private $database;
-private $username;
-private  $password;
-private $academiaconexao; 
-    
-public function __construct() {
+    private $hostname;
+    private $database;
+    private $username;
+    private $password;
+    private $academiaconexao;
 
-$hostname = "localhost";
-$database = "academia";
-$username = "root";
-$password = "123";
+    public function __construct() {
 
-$academiaconexao = mysql_connect($hostname, $username, $password)
-        or trigger_error(mysql_error(), E_USER_ERROR);
-mysql_select_db($database);
+        $hostname = "localhost";
+        $database = "academia";
+        $username = "root";
+        $password = "123";
 
-}   
+        $academiaconexao = mysql_connect($hostname, $username, $password)
+                or trigger_error(mysql_error(), E_USER_ERROR);
+        mysql_select_db($database);
+    }
 
-function getUsuarios(){
- 
-$re = mysql_query("select * from usuario order by iduser");
+    function getUsuarios() {
 
-if (mysql_errno() != 0) {
-    return NULL;
-}
+        $re = mysql_query("select * from usuario order by iduser");
 
-while ($l = mysql_fetch_array($re))
-{
-    $retorno[] = $l;
-}
+        if (mysql_erro() != 0) {
+            return NULL;
+        }
 
-mysql_close();
-return $retorno;
+        while ($l = mysql_fetch_array($re)) {
+            $retorno[] = $l;
+        }
 
-}
+        mysql_close();
+        return $retorno;
+    }
 
+    function getId() {
+        $re = mysql_query("select * from usuario where iduser = $id");
 
+        if (mysql_erro() != 0) {
+            return NULL;
+        }
+        while ($l = mysql_fetch_array($re)) {
+            $retorno[] = $l;
+        }
+    }
 
 }

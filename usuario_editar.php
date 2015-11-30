@@ -1,18 +1,15 @@
 <?php
 $id = $_GET["iduser"];
 include_once('classe/AcademiaDao.php');
-$re = new AcademiaDao();
-$re = $re->getRe();
-
-$re = mysql_query("select count(*) as total from usuario where iduser = $id");
-$total = mysql_result($re, 0, "total");
+$id = new AcademiaDao();
+$id = $id->getId();
 ?>
 
 
 
 <form name="form_user" method="post" action="?ps=usuario_editar">
     <table>
-        <?php foreach ($re as $value) { ?>
+        <?php foreach ($id as $value) { ?>
             <tr>
                 <td>Nome</td>
                 <td><input name="usuario" type="text" id="usuario" maxlength="19" value="" /><?= $value["nome"] ?></td>
