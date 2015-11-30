@@ -30,7 +30,7 @@
             <div class="col_1">
                 <ul class="simple">
                     <li><a href="?ps=usuario_cadastro">Cadastro</a></li>
-                    <li><a href="?ps=usuario_listar">Consultas</a></li>
+                    <li><a href="?ps=usuario_listar">Consulta</a></li>
                 </ul>
             </div>   
         </div> 

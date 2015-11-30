@@ -134,7 +134,9 @@ $totalRows_Recordset1 = mysql_num_rows($Recordset1);
   <div class="conteudo_logo"><img src="images/logo.png" width="150" height="100" /></div>
   <div class="conteudo_menu"><?php require('menu.php'); // Aqui é incluído o menu?></div>
   <div class="conteudo_central">
+      
   <?php if(isset($_GET["ps"])) include($_GET["ps"].".php"); else include ("home.php");?>
+      
   </div>
 </div>
 
