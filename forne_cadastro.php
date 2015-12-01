@@ -1,4 +1,4 @@
-<form name="form_user" method="post" action="?ps=prod_cadastro">
+<form name="form_user" method="post" action="?ps=forn_cadastro">
     <table>
         <tr>
             <td class="titulo" colspan="2" align="center">CADASTRAR FORNECEDOR</td>

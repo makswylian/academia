@@ -18,7 +18,7 @@
         <div class="dropdown_2columns">
             <div class="col_1">
                 <ul class="simple">
-                    <li><a href="?ps=forne_cadastro">Cadastro</a></li>
+                    <li><a href="?ps=forn_cadastro">Cadastro</a></li>
                     <li><a href="#">Consulta</a></li>
                 </ul>
             </div>   
