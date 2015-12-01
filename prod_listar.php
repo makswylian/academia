@@ -35,23 +35,23 @@ $produtos = $produtos->getProdutos();
                 Peso              
             </th>
             <th>
-                Valor Unidade              
+                Valor Unitário              
             </th>
 
             <th>Editar</th>
         </tr>
         <?php foreach ($produtos as $value) { ?>
             <tr> 
-                <td><?= $value["idproduto"] ?></td>
-                <td><?= $value["idfornecedor"] ?></td>
-                <td><?= $value["nome"] ?></td>
-                <td><?= $value["datavali"] ?></td>
-                <td><?= $value["descricao"] ?></td>
-                <td><?= $value["tamanho"] ?></td>
-                <td><?= $value["tipo"] ?></td>
-                <td><?= $value["peso"] ?></td>
-                <td><?= $value["vloruni"] ?></td>
-                <td><a href="?ps=prod_editar&idprod=<?= $value["idprod"] ?>"  class="ion-edit"></a></td>
+                <td><?= $value["idproduto"]; ?></td>
+                <td><?= $value["idfornecedor"]; ?></td>
+                <td><?= $value["nome"]; ?></td>
+                <td><?= $value["datavali"]; ?></td>
+                <td><?= $value["descricao"]; ?></td>
+                <td><?= $value["tamanho"]; ?></td>
+                <td><?= $value["tipo"]; ?></td>
+                <td><?= $value["peso"]; ?></td>
+                <td><?= 'R$ '.number_format($value["valoruni"],2,',','.'); ?></td>
+                <td><a href="?ps=prod_editar&idprod=<?= $value["idprod"]; ?>"  class="ion-edit"></a></td>
             </tr>
         <?php } ?>
 
