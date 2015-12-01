@@ -42,8 +42,8 @@ $produtos = $produtos->getProdutos();
         </tr>
         <?php foreach ($produtos as $value) { ?>
             <tr> 
-                <td><?= $value["idprod"] ?></td>
-                <td><?= $value["idforn"] ?></td>
+                <td><?= $value["idproduto"] ?></td>
+                <td><?= $value["idfornecedor"] ?></td>
                 <td><?= $value["nome"] ?></td>
                 <td><?= $value["datavali"] ?></td>
                 <td><?= $value["descricao"] ?></td>
