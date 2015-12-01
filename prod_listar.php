@@ -40,7 +40,7 @@ $produtos = $produtos->getProdutos();
 
             <th>Editar</th>
         </tr>
-        <?php foreach ($usuarios as $value) { ?>
+        <?php foreach ($produtos as $value) { ?>
             <tr> 
                 <td><?= $value["idprod"] ?></td>
                 <td><?= $value["idforn"] ?></td>

@@ -5,7 +5,7 @@
         </tr>
         <tr>
             <td><label>ID Estado: </label></td>
-            <td><input type="int" name="idestado" value="" maxlength="40"></td>
+            <td><input type="int" name="idestado" value="" maxlength="2"></td>
         </tr>
         <tr>
             <td><label>Nome: </label></td>
@@ -13,11 +13,11 @@
         </tr>
         <tr>
             <td><label>CNPJ: </label></td>
-            <td><input type="int" name="cnpj" value="" maxlength="20"></td>
+            <td><input type="text" name="cnpj" value="" maxlength="20"></td>
         </tr>
         <tr>
             <td><label>Endereço: </label></td>
-            <td><input type="text" name="endereco" value="" maxlength="20"></td>
+            <td><input type="text" name="endereco" value="" maxlength="50"></td>
         </tr>
         <tr>
             <td><label>Inscrição Estadual: </label></td>
