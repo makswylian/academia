@@ -13,23 +13,23 @@
         </tr>
         <tr>
             <td><label>Data de Validade: </label></td>
-            <td><input id="" type="text" name="data" value="" maxlength="20"></td>
+            <td><input type="date" name="data" value="" maxlength="20"></td>
         </tr>
         <tr>
             <td><label>Descrição: </label></td>
-            <td><input id="" type="text" name="desc" value="" maxlength="20"></td>
+            <td><input type="text" name="descricao" value="" maxlength="50"></td>
         <tr>
         <tr>
             <td><label>Tamanho: </label></td>
-            <td><input id="" type="text" name="tamanho" value="" maxlength="20"></td>
+            <td><input type="text" name="tamanho" value="" maxlength="20"></td>
         </tr>
         <tr>
             <td><label>Tipo: </label></td>
-            <td><input type="int" name="dtipo" value="" maxlength="40"></td>
+            <td><input type="text" name="dtipo" value="" maxlength="40"></td>
         </tr>
         <tr>
             <td><label>Peso: </label></td>
-            <td><input type="int" name="peso" value="" maxlength="40"></td>
+            <td><input type="text" name="peso" value="" maxlength="40"></td>
         </tr>
         <tr>
             <td><label>Valor Unitário: </label></td>
@@ -51,7 +51,7 @@ if (isset($_POST) && count($_POST) > 0) {
     $salva_tipo = $_POST['tipo'];
     $salva_peso = $_POST['peso'];
     $salva_valoruni = $_POST['valoruni'];
-    //Validar valores vazio.
+    //Validar valores vazios.
     if (trim($salva_nome) == "") {
         echo 'Sem Nome.';
         return;
@@ -73,7 +73,7 @@ if (isset($_POST) && count($_POST) > 0) {
         return;
     }
 
-    $sql_gravar = mysql_query("INSERT INTO produtos (nome, idfornecedor, data, descricao, tamanho, tipo, peso, valoruni) "
+    $sql_gravar = mysql_query("INSERT INTO produtos (nome, idfornecedor, datavali, descricao, tamanho, tipo, peso, valoruni) "
             . "value ('$salva_nome','$salva_idforn','$salva_data','$salva_descricao','$salva_tamanho','$salva_tipo','$salva_peso','$salva_valoruni')");
 }
 ?>

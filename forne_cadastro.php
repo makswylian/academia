@@ -29,7 +29,7 @@
         </tr>
         <tr>
             <td><label>Email: </label></td>
-            <td><input type="texe" name="email" value="" maxlength="40"></td>
+            <td><input type="text" name="email" value="" maxlength="40"></td>
         </tr>
         <tr>
             <td><label>Contato: </label></td>
@@ -54,7 +54,7 @@ if (isset($_POST) && count($_POST) > 0) {
     $salva_contato = $_POST['contato'];
     $salva_peso = $_POST['peso'];
 
-    //Validar valores vazio.
+    //Validar valores vazios.
     if (trim($salva_nome) == "") {
         echo 'Sem Nome.';
         return;
