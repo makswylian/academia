@@ -58,7 +58,7 @@ if (isset($_POST) && count($_POST) > 0) {
         return;
     }
 
-    $sql_gravar = mysql_query("UPDATE usuario SET `nome`='$salva_nome',email='$salva_email', "
-            . "usuario='$salva_usuario', senha='$salva_senha', nivel='$salva_nivel'WHERE  `iduser`='$id'");
+    $sql_gravar = mysql_query("UPDATE usuario SET nome='$salva_nome',email='$salva_email', "
+            . "usuario='$salva_usuario', senha='$salva_senha', nivel='$salva_nivel' WHERE  iduser=$id");
 }
 ?>
