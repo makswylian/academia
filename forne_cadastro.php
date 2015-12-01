@@ -44,14 +44,14 @@
 <?php
 if (isset($_POST) && count($_POST) > 0) {
 
-    $salva_nome = $_POST['idestado'];
+    $salva_idestado = $_POST['idestado'];
     $salva_nome = $_POST['nome'];
-    $salva_valoruni = $_POST['cnpj'];
-    $salva_idforn = $_POST['endereco'];
-    $salva_data = $_POST['insestado'];
-    $salva_descricao = $_POST['tel'];
-    $salva_tamanho = $_POST['email'];
-    $salva_tipo = $_POST['contato'];
+    $salva_cnpj = $_POST['cnpj'];
+    $salva_endereco = $_POST['endereco'];
+    $salva_insestado = $_POST['insestado'];
+    $salva_tel = $_POST['tel'];
+    $salva_email = $_POST['email'];
+    $salva_contato = $_POST['contato'];
     $salva_peso = $_POST['peso'];
 
     //Validar valores vazio.
@@ -59,24 +59,21 @@ if (isset($_POST) && count($_POST) > 0) {
         echo 'Sem Nome.';
         return;
     }
-    if (trim($salva_idforn) == "") {
+    if (trim($salva_idestado) == "") {
         echo 'Sem Código do Fornecedor.';
         return;
     }
-    if (trim($salva_data) == "") {
+    if (trim($salva_cnpj) == "") {
         echo 'Sem Data de Validade.';
         return;
     }
-    if (trim($salva_valoruni) == "") {
+    if (trim($salva_insestado) == "") {
         echo 'Sem Valor Unitário.';
         return;
     }
-    if (trim($salva_descricao) == "") {
-        echo 'Sem Descrição.';
-        return;
-    }
-
-    $sql_gravar = mysql_query("INSERT INTO produtos (nome, idfornecedor, data, descricao, tamanho, tipo, peso, valoruni) "
-            . "value ('$salva_nome','$salva_idforn','$salva_data','$salva_descricao','$salva_tamanho','$salva_tipo','$salva_peso','$salva_valoruni')");
+   
+ 
+    $sql_gravar = mysql_query("INSERT INTO fornecedor (idestado, nome, cnpj, endereco, insestado, tel, email, contato, peso) "
+            . "value ('$salva_idestado','$salva_nome','$salva_cnpj','$salva_endereco','$salva_insestado','$salva_tel','$salva_email','$salva_contato','$salva_peso')");
 }
 ?>
