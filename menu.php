@@ -8,7 +8,7 @@
                 <ul class="simple">
                     <li><a href="?ps=prod_cadastro">Cadastro</a></li>
                     <li><a href="#">Estoque</a></li>
-                    <li><a href="#">Consultas</a></li>
+                    <li><a href="#">Consulta</a></li>
                 </ul>
             </div>   
         </div> 
@@ -19,7 +19,7 @@
             <div class="col_1">
                 <ul class="simple">
                     <li><a href="?ps=forne_cadastro">Cadastro</a></li>
-                    <li><a href="#">Consultas</a></li>
+                    <li><a href="#">Consulta</a></li>
                 </ul>
             </div>   
         </div> 
@@ -42,7 +42,7 @@
                 <ul class="simple">
                     <li><a href="?ps=cliente_cadastro">Cadastro</a></li>
                     <li><a href="#">Editar</a></li>
-                    <li><a href="#">Consultas</a></li>
+                    <li><a href="#">Consulta</a></li>
                 </ul>
             </div>   
         </div> 
@@ -53,7 +53,7 @@
             <div class="col_1">
                 <ul class="simple">
                     <li><a href="?ps=gera_pedido">Gerar</a></li>
-                    <li><a href="#">Editar </a></li>
+                    <li><a href="#">Consulta</a></li>
                 </ul>
             </div>   
         </div> 
