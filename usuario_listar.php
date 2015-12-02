@@ -1,4 +1,17 @@
 <?php
+$isAdmin = $_SESSION['nivel'] == "0" ? TRUE : FALSE;
+
+if (!$isAdmin) {
+    header('home.php');
+    exit();
+}
+
+include_once('classe/AcademiaDao.php');
+$id = $_GET["iduser"];
+$usuario = new AcademiaDao();
+$usuario = $usuario->getIduser($id);
+
+
 include_once('classe/AcademiaDao.php');
 
 $usuarios = new AcademiaDao();

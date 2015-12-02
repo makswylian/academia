@@ -4,7 +4,6 @@ $id = $_GET["iduser"];
 $usuario = new AcademiaDao();
 $usuario = $usuario->getIduser($id);
 ?>
-
 <form name="form_user" method="post" action="?ps=usuario_editar">
 
 
@@ -23,15 +22,21 @@ $usuario = $usuario->getIduser($id);
             <td><input name="email" type="text" maxlength="50" value="<?= $usuario["email"] ?>" /></td>
         </tr>
         <tr>
-            <td>Nivel:</td>
-            <td><input name="nivel" type="text" maxlength="1" value="<?= $usuario["nivel"] ?>" /></td>
-        </tr>
-        <tr>
             <td>Senha:</td>
             <td><input name="senha" type="password" maxlength="50"  value="<?= $usuario["senha"] ?>" /></td>
         </tr>
+<!--        <tr>
+            <td>Nivel:</td>
+            <td><input name="nivel" type="text" maxlength="1" value="<?= $usuario["nivel"] ?>" /></td>
+        </tr>-->
+        <td><label>Nivel de acesso: </label></td>
+            <td>
+                <input type="radio" name="nivel" value="0">Administrador
+                <input type="radio" name="nivel" value="1">Usuário Comum
+            </td>
     </table>
-    <input type="submit" id="button10" value="Salvar Edição"   />
+    <input type="hidden" name="idusuario" value="<?= $_GET["iduser"]; ?>">
+    <input type="submit" class="form_bt" value="Salvar Edição"   />
 
 </form>
 
@@ -43,6 +48,7 @@ if (isset($_POST) && count($_POST) > 0) {
     $salva_usuario = $_POST['usuario'];
     $salva_senha = $_POST['senha'];
     $salva_nivel = $_POST ['nivel'];
+    $idusuario = $_POST ['idusuario'];
 
 //Validar valores vazio.
     if (trim($salva_nome) == "") {
@@ -59,6 +65,6 @@ if (isset($_POST) && count($_POST) > 0) {
     }
 
     $sql_gravar = mysql_query("UPDATE usuario SET nome='$salva_nome',email='$salva_email', "
-            . "usuario='$salva_usuario', senha='$salva_senha', nivel='$salva_nivel' WHERE  iduser=$id");
+            . "usuario='$salva_usuario', senha='$salva_senha', nivel='$salva_nivel' WHERE iduser=$idusuario");
 }
 ?>

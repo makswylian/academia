@@ -13,13 +13,13 @@ $produtos = $produtos->getProdutos();
             <th>
                 ID Produto          
             </th>
-             <th>
+            <th>
                 ID Fornecedor          
             </th>
             <th>
                 Nome             
             </th>
-             <th>
+            <th>
                 Data de Validade             
             </th>          
             <th>
@@ -50,7 +50,7 @@ $produtos = $produtos->getProdutos();
                 <td><?= $value["tamanho"]; ?></td>
                 <td><?= $value["tipo"]; ?></td>
                 <td><?= $value["peso"]; ?></td>
-                <td><?= 'R$ '.number_format($value["valoruni"],2,',','.'); ?></td>
+                <td><?= 'R$ ' . number_format($value["valoruni"], 2, ',', '.'); ?></td>
                 <td><a href="?ps=prod_editar&idprod=<?= $value["idprod"]; ?>"  class="ion-edit"></a></td>
             </tr>
         <?php } ?>

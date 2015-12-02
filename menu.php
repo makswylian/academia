@@ -7,7 +7,6 @@
             <div class="col_1">
                 <ul class="simple">
                     <li><a href="?ps=prod_cadastro">Cadastro</a></li>
-                    <li><a href="#">Estoque</a></li>
                     <li><a href="?ps=prod_listar">Consulta</a></li>
                 </ul>
             </div>   
