@@ -65,5 +65,19 @@ class AcademiaDao {
         mysql_close();
         return $retorno;
     }
+   function getIdproduto($id) {
 
+        $re = mysql_query("select * from produto where idprodut = $idproduto");	
+
+        if (mysql_errno() != 0) {
+            return NULL;
+        }
+
+        while ($l = mysql_fetch_array($re)) {
+            $retorno[] = $l;
+        }
+
+        mysql_close();
+        return $retorno[0];
+    }
 }

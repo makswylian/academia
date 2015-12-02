@@ -38,7 +38,7 @@ if (!$isAdmin) {
 
         </tr>
     </table>
-    <input type="submit" id="button1" value="Cadastrar"   />
+    <input type="submit" class="form_bt" value="Cadastrar"   />
 </form>
 
 
@@ -68,5 +68,6 @@ if (isset($_POST) && count($_POST) > 0) {
     $sql_gravar = mysql_query("INSERT INTO usuario (nome, email, usuario, senha, nivel) "
             . "value ('$salva_nome','$salva_email','$salva_usuario','$salva_senha','$salva_nivel')");
 }
+echo 'OPERAÇÃO BEM SUCEDIDA';
 ?>
 
