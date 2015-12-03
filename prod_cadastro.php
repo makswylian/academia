@@ -75,6 +75,7 @@ if (isset($_POST) && count($_POST) > 0) {
 
     $sql_gravar = mysql_query("INSERT INTO produtos (nome, idfornecedor, datavali, descricao, litros, tipo, peso, valoruni) "
             . "value ('$salva_nome','$salva_idforn','$salva_data','$salva_descricao','$salva_litros','$salva_tipo','$salva_peso','$salva_valoruni')");
+
+    echo 'OPERAÇÃO BEM SUCEDIDA';
 }
-echo 'OPERAÇÃO BEM SUCEDIDA';
 ?>

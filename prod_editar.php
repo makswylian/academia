@@ -11,35 +11,35 @@ $produto = $produto->getIdproduto($id);
 
         <tr>
             <td>Códido Fornecedor:</td>
-            <td><input type="int" name="idforn" maxlength="20" value="<?= $usuario["idfornecedor"] ?>" /></td>
+            <td><input type="int" name="idforn" maxlength="20" value="<?= $produto["idfornecedor"] ?>" /></td>
         </tr>
         <tr>
             <td>Nome:</td>
-            <td><input type="int" name="nome" maxlength="20" value="<?= $usuario["nome"] ?>" /></td>
+            <td><input type="int" name="nome" maxlength="20" value="<?= $produto["nome"] ?>" /></td>
         </tr>
         <tr>
             <td>Data de Validade:</td>
-            <td><input type="date" name="data" maxlength="20" value="<?= $usuario["datavali"] ?>" /></td>
+            <td><input type="date" name="data" maxlength="20" value="<?= $produto["datavali"] ?>" /></td>
         </tr>
         <tr>
             <td>Descrição:</td>
-            <td><input type="text" name="descricao" maxlength="50"<?= $usuario["descricao"] ?>" /></td>
+            <td><input type="text" name="descricao" maxlength="50 "value="<?= $produto["descricao"] ?>" /></td>
         </tr>
         <tr>
             <td>Litros:</td>
-            <td><input type="text" name="litros" maxlength="20"<?= $usuario["litros"] ?>" /></td>
+            <td><input type="text" name="litros" maxlength="20" value="<?= $produto["litros"] ?>" /></td>
         </tr>
         <tr>
             <td>Tipo:</td>
-            <td><input type="text" name="tipo" maxlength="40" value="<?= $usuario["tipo"] ?>" /></td>
+            <td><input type="text" name="tipo" maxlength="40" value="<?= $produto["tipo"] ?>" /></td>
         </tr>
         <tr>
             <td>Peso:</td>
-            <td><input type="text" name="peso" maxlength="40" value="<?= $usuario["peso"] ?>" /></td>
+            <td><input type="text" name="peso" maxlength="40" value="<?= $produto["peso"] ?>" /></td>
         </tr>
         <tr>
             <td>Valor Unitário:</td>
-            <td><input type="int" name="valoruni" maxlength="40"value="<?= 'R$ ' . number_format($value["valoruni"], 2, ',', '.'); ?>"/></td>
+            <td><input type="int" name="valoruni" maxlength="40"value="<?= $produto["valoruni"] ?>"/></td>
         </tr>
 
 
@@ -79,13 +79,14 @@ if (isset($_POST) && count($_POST) > 0) {
         echo 'Sem Descrição.';
         return;
     }
-     if (trim($salva_tipo) == "") {
+    if (trim($salva_tipo) == "") {
         echo 'Sem Tipo.';
         return;
     }
 
     $sql_gravar = mysql_query("UPDATE produto SET idfornecedor='$salva_idforn' nome='$salva_nome',datavali='$salva_data', "
             . "descricao='$salva_descricao', litros='$salva_litros', tipo='$salva_tipo', peso='$salva_peso'peso, valoruni='$salva_valoruni' WHERE idproduto= $idproduto");
+
+    echo 'OPERAÇÃO BEM SUCEDIDA';
 }
-echo 'OPERAÇÃO BEM SUCEDIDA';
 ?>

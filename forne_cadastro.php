@@ -71,10 +71,11 @@ if (isset($_POST) && count($_POST) > 0) {
         echo 'Sem Valor Unitário.';
         return;
     }
-   
- 
+
+
     $sql_gravar = mysql_query("INSERT INTO fornecedor (idestado, nome, cnpj, endereco, insestado, tel, email, contato, peso) "
             . "value ('$salva_idestado','$salva_nome','$salva_cnpj','$salva_endereco','$salva_insestado','$salva_tel','$salva_email','$salva_contato','$salva_peso')");
+
+    echo 'OPERAÇÃO BEM SUCEDIDA';
 }
-echo 'OPERAÇÃO BEM SUCEDIDA';
 ?>

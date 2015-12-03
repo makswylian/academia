@@ -30,10 +30,10 @@ $usuario = $usuario->getIduser($id);
             <td><input name="nivel" type="text" maxlength="1" value="<?= $usuario["nivel"] ?>" /></td>
         </tr>-->
         <td><label>Nivel de acesso: </label></td>
-            <td>
-                <input type="radio" name="nivel" value="0">Administrador
-                <input type="radio" name="nivel" value="1">Usuário Comum
-            </td>
+        <td>
+            <input type="radio" name="nivel" value="0">Administrador
+            <input type="radio" name="nivel" value="1">Usuário Comum
+        </td>
     </table>
     <input type="hidden" name="idusuario" value="<?= $_GET["iduser"]; ?>">
     <input type="submit" class="form_bt" value="Salvar Edição"   />
@@ -66,6 +66,7 @@ if (isset($_POST) && count($_POST) > 0) {
 
     $sql_gravar = mysql_query("UPDATE usuario SET nome='$salva_nome',email='$salva_email', "
             . "usuario='$salva_usuario', senha='$salva_senha', nivel='$salva_nivel' WHERE iduser=$idusuario");
+
+    echo 'OPERAÇÃO BEM SUCEDIDA';
 }
-echo 'OPERAÇÃO BEM SUCEDIDA';
 ?>

@@ -51,7 +51,7 @@ $produtos = $produtos->getProdutos();
                 <td><?= $value["tipo"]; ?></td>
                 <td><?= $value["peso"]; ?></td>
                 <td><?= 'R$ ' . number_format($value["valoruni"], 2, ',', '.'); ?></td>
-                <td><a href="?ps=prod_editar&idprod=<?= $value["idprod"]; ?>"  class="ion-edit"></a></td>
+                <td><a href="?ps=prod_editar&idprod=<?= $value["idproduto"]; ?>"  class="ion-edit"></a></td>
             </tr>
         <?php } ?>
 

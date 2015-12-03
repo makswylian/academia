@@ -67,7 +67,7 @@ class AcademiaDao {
     }
    function getIdproduto($id) {
 
-        $re = mysql_query("select * from produto where idprodut = $idproduto");	
+        $re = mysql_query("select * from produtos where idproduto = $idproduto");	
 
         if (mysql_errno() != 0) {
             return NULL;

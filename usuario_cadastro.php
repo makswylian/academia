@@ -50,7 +50,7 @@ if (isset($_POST) && count($_POST) > 0) {
     $salva_usuario = $_POST['usuario'];
     $salva_senha = $_POST['senha'];
     $salva_nivel = $_POST ['nivel'];
-    
+
 //Validar valores vazio.
     if (trim($salva_nome) == "") {
         echo 'Sem Nome.';
@@ -67,7 +67,8 @@ if (isset($_POST) && count($_POST) > 0) {
 
     $sql_gravar = mysql_query("INSERT INTO usuario (nome, email, usuario, senha, nivel) "
             . "value ('$salva_nome','$salva_email','$salva_usuario','$salva_senha','$salva_nivel')");
+
+    echo 'OPERAÇÃO BEM SUCEDIDA';
 }
-echo 'OPERAÇÃO BEM SUCEDIDA';
 ?>
 

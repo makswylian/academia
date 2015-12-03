@@ -55,6 +55,7 @@ if (isset($_POST) && count($_POST) > 0) {
 
     $sql_gravar = mysql_query("INSERT INTO cliente (nome, dtnasc, fone, email, obs) "
             . "value ('$salva_nome','$salva_dtnasc','$salva_telefone','$salva_email','$salva_obs')");
+
+    echo 'OPERAÇÃO BEM SUCEDIDA';
 }
-echo 'OPERAÇÃO BEM SUCEDIDA';
 ?>
