@@ -20,8 +20,8 @@
             <td><input type="text" name="descricao" value="" maxlength="50"></td>
         <tr>
         <tr>
-            <td><label>Tamanho: </label></td>
-            <td><input type="text" name="tamanho" value="" maxlength="20"></td>
+            <td><label>Litros: </label></td>
+            <td><input type="text" name="litros" value="" maxlength="20"></td>
         </tr>
         <tr>
             <td><label>Tipo: </label></td>
@@ -47,7 +47,7 @@ if (isset($_POST) && count($_POST) > 0) {
     $salva_idforn = $_POST['idforn'];
     $salva_data = $_POST['data'];
     $salva_descricao = $_POST['descricao'];
-    $salva_tamanho = $_POST['tamanho'];
+    $salva_litros = $_POST['litros'];
     $salva_tipo = $_POST['tipo'];
     $salva_peso = $_POST['peso'];
     $salva_valoruni = $_POST['valoruni'];
@@ -73,8 +73,8 @@ if (isset($_POST) && count($_POST) > 0) {
         return;
     }
 
-    $sql_gravar = mysql_query("INSERT INTO produtos (nome, idfornecedor, datavali, descricao, tamanho, tipo, peso, valoruni) "
-            . "value ('$salva_nome','$salva_idforn','$salva_data','$salva_descricao','$salva_tamanho','$salva_tipo','$salva_peso','$salva_valoruni')");
+    $sql_gravar = mysql_query("INSERT INTO produtos (nome, idfornecedor, datavali, descricao, litros, tipo, peso, valoruni) "
+            . "value ('$salva_nome','$salva_idforn','$salva_data','$salva_descricao','$salva_litros','$salva_tipo','$salva_peso','$salva_valoruni')");
 }
 echo 'OPERAÇÃO BEM SUCEDIDA';
 ?>

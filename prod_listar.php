@@ -26,7 +26,7 @@ $produtos = $produtos->getProdutos();
                 Descrição            
             </th>
             <th>
-                Tamanho              
+                Litros              
             </th>
             <th>
                 Tipo              
@@ -47,7 +47,7 @@ $produtos = $produtos->getProdutos();
                 <td><?= $value["nome"]; ?></td>
                 <td><?= $value["datavali"]; ?></td>
                 <td><?= $value["descricao"]; ?></td>
-                <td><?= $value["tamanho"]; ?></td>
+                <td><?= $value["litros"]; ?></td>
                 <td><?= $value["tipo"]; ?></td>
                 <td><?= $value["peso"]; ?></td>
                 <td><?= 'R$ ' . number_format($value["valoruni"], 2, ',', '.'); ?></td>

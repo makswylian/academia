@@ -25,13 +25,13 @@ $produto = $produto->getIdproduto($id);
             <td>Descrição:</td>
             <td><input type="text" name="descricao" maxlength="50"<?= $usuario["descricao"] ?>" /></td>
         </tr>
-       <tr>
-            <td>Tamanho:</td>
-            <td><input type="text" name="tamanho" maxlength="20"<?= $usuario["tamanho"] ?>" /></td>
+        <tr>
+            <td>Litros:</td>
+            <td><input type="text" name="litros" maxlength="20"<?= $usuario["litros"] ?>" /></td>
         </tr>
         <tr>
             <td>Tipo:</td>
-            <td><input type="text" name="dtipo" maxlength="40" value="<?= $usuario["tipo"] ?>" /></td>
+            <td><input type="text" name="tipo" maxlength="40" value="<?= $usuario["tipo"] ?>" /></td>
         </tr>
         <tr>
             <td>Peso:</td>
@@ -52,28 +52,40 @@ $produto = $produto->getIdproduto($id);
 <?php
 if (isset($_POST) && count($_POST) > 0) {
 
+    $salva_idforn = $_POST['idforn'];
     $salva_nome = $_POST['nome'];
-    $salva_email = $_POST['email'];
-    $salva_usuario = $_POST['usuario'];
-    $salva_senha = $_POST['senha'];
-    $salva_nivel = $_POST ['nivel'];
+    $salva_data = $_POST['data'];
+    $salva_descricao = $_POST['descricao'];
+    $salva_litros = $_POST ['litros'];
+    $salva_tipo = $_POST ['tipo'];
+    $salva_peso = $_POST ['peso'];
+    $salva_valoruni = $_POST ['valoruni'];
     $idproduto = $_POST ['idusuario'];
 
 //Validar valores vazio.
+    if (trim($salva_idforn) == "") {
+        echo 'Sem Nome.';
+        return;
+    }
     if (trim($salva_nome) == "") {
         echo 'Sem Nome.';
         return;
     }
-    if (trim($salva_usuario) == "") {
-        echo 'Sem Usuário.';
+    if (trim($salva_data) == "") {
+        echo 'Sem Data de Validade.';
         return;
     }
-    if (trim($salva_senha) == "") {
-        echo 'Sem Senha.';
+    if (trim($salva_descricao) == "") {
+        echo 'Sem Descrição.';
+        return;
+    }
+     if (trim($salva_tipo) == "") {
+        echo 'Sem Tipo.';
         return;
     }
 
-    $sql_gravar = mysql_query("UPDATE produto SET nome='$salva_nome',email='$salva_email', "
-            . "usuario='$salva_usuario', senha='$salva_senha', nivel='$salva_nivel' WHERE idproduto= $idproduto");
+    $sql_gravar = mysql_query("UPDATE produto SET idfornecedor='$salva_idforn' nome='$salva_nome',datavali='$salva_data', "
+            . "descricao='$salva_descricao', litros='$salva_litros', tipo='$salva_tipo', peso='$salva_peso'peso, valoruni='$salva_valoruni' WHERE idproduto= $idproduto");
 }
+echo 'OPERAÇÃO BEM SUCEDIDA';
 ?>
