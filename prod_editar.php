@@ -4,34 +4,47 @@ $id = $_GET["idprod"];
 $produto = new AcademiaDao();
 $produto = $produto->getIdproduto($id);
 ?>
-<form name="form_user" method="post" action="?ps=usuario_editar">
+<form name="form_user" method="post" action="?ps=prod_editar">
 
 
     <table border=1 cellspacing=0 cellpadding=2 bordercolor="#620f0f"> 
 
         <tr>
+            <td>Códido Fornecedor:</td>
+            <td><input type="int" name="idforn" maxlength="20" value="<?= $usuario["idfornecedor"] ?>" /></td>
+        </tr>
+        <tr>
             <td>Nome:</td>
-            <td><input name="nome" type="text" maxlength="19" value="<?= $usuario["nome"] ?>" /></td>
+            <td><input type="int" name="nome" maxlength="20" value="<?= $usuario["nome"] ?>" /></td>
         </tr>
         <tr>
-            <td>Usuário:</td>
-            <td><input name="usuario" type="text" maxlength="30" value="<?= $usuario["usuario"] ?>" /></td>
+            <td>Data de Validade:</td>
+            <td><input type="date" name="data" maxlength="20" value="<?= $usuario["datavali"] ?>" /></td>
         </tr>
         <tr>
-            <td>Email:</td>
-            <td><input name="email" type="text" maxlength="50" value="<?= $usuario["email"] ?>" /></td>
+            <td>Descrição:</td>
+            <td><input type="text" name="descricao" maxlength="50"<?= $usuario["descricao"] ?>" /></td>
+        </tr>
+       <tr>
+            <td>Tamanho:</td>
+            <td><input type="text" name="tamanho" maxlength="20"<?= $usuario["tamanho"] ?>" /></td>
         </tr>
         <tr>
-            <td>Senha:</td>
-            <td><input name="senha" type="password" maxlength="50"  value="<?= $usuario["senha"] ?>" /></td>
+            <td>Tipo:</td>
+            <td><input type="text" name="dtipo" maxlength="40" value="<?= $usuario["tipo"] ?>" /></td>
         </tr>
         <tr>
-            <td>Nivel:</td>
-            <td><input name="nivel" type="text" maxlength="1" value="<?= $usuario["nivel"] ?>" /></td>
+            <td>Peso:</td>
+            <td><input type="text" name="peso" maxlength="40" value="<?= $usuario["peso"] ?>" /></td>
         </tr>
-        
+        <tr>
+            <td>Valor Unitário:</td>
+            <td><input type="int" name="valoruni" maxlength="40"value="<?= 'R$ ' . number_format($value["valoruni"], 2, ',', '.'); ?>"/></td>
+        </tr>
+
+
     </table>
-    <input type="hidden" name="idusuario" value="<?= $_GET["idproduto"]; ?>">
+    <input type="hidden" name="idproduto" value="<?= $_GET["idprod"]; ?>">
     <input type="submit" class="form_bt" value="Salvar Edição"   />
 
 </form>
@@ -44,7 +57,7 @@ if (isset($_POST) && count($_POST) > 0) {
     $salva_usuario = $_POST['usuario'];
     $salva_senha = $_POST['senha'];
     $salva_nivel = $_POST ['nivel'];
-    $idusuario = $_POST ['idusuario'];
+    $idproduto = $_POST ['idusuario'];
 
 //Validar valores vazio.
     if (trim($salva_nome) == "") {
@@ -61,6 +74,6 @@ if (isset($_POST) && count($_POST) > 0) {
     }
 
     $sql_gravar = mysql_query("UPDATE produto SET nome='$salva_nome',email='$salva_email', "
-            . "usuario='$salva_usuario', senha='$salva_senha', nivel='$salva_nivel' WHERE idproduto=$idusuario");
+            . "usuario='$salva_usuario', senha='$salva_senha', nivel='$salva_nivel' WHERE idproduto= $idproduto");
 }
 ?>
