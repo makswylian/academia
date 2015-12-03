@@ -65,7 +65,7 @@ class AcademiaDao {
         mysql_close();
         return $retorno;
     }
-   function getIdproduto($id) {
+   function getIdproduto($idproduto) {
 
         $re = mysql_query("select * from produtos where idproduto = $idproduto");	
 

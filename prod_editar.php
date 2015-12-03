@@ -39,7 +39,7 @@ $produto = $produto->getIdproduto($id);
         </tr>
         <tr>
             <td>Valor Unitário:</td>
-            <td><input type="int" name="valoruni" maxlength="40"value="<?= $produto["valoruni"] ?>"/></td>
+            <td><input type="int" name="valoruni" maxlength="40"value="<?= number_format($produto["valoruni"], 2, ',', '.'); ?>"/></td>
         </tr>
 
 
@@ -56,15 +56,15 @@ if (isset($_POST) && count($_POST) > 0) {
     $salva_nome = $_POST['nome'];
     $salva_data = $_POST['data'];
     $salva_descricao = $_POST['descricao'];
-    $salva_litros = $_POST ['litros'];
-    $salva_tipo = $_POST ['tipo'];
-    $salva_peso = $_POST ['peso'];
-    $salva_valoruni = $_POST ['valoruni'];
-    $idproduto = $_POST ['idusuario'];
+    $salva_litros = $_POST['litros'];
+    $salva_tipo = $_POST['tipo'];
+    $salva_peso = $_POST['peso'];
+    $salva_valoruni = $_POST['valoruni'];
+    $idproduto = $_POST['idproduto'];
 
 //Validar valores vazio.
     if (trim($salva_idforn) == "") {
-        echo 'Sem Nome.';
+        echo 'Sem Códido Fornecedor.';
         return;
     }
     if (trim($salva_nome) == "") {
@@ -84,8 +84,8 @@ if (isset($_POST) && count($_POST) > 0) {
         return;
     }
 
-    $sql_gravar = mysql_query("UPDATE produto SET idfornecedor='$salva_idforn' nome='$salva_nome',datavali='$salva_data', "
-            . "descricao='$salva_descricao', litros='$salva_litros', tipo='$salva_tipo', peso='$salva_peso'peso, valoruni='$salva_valoruni' WHERE idproduto= $idproduto");
+    $sql_gravar = mysql_query("UPDATE produto SET idfornecedor='$salva_idforn', nome='$salva_nome',datavali=$salva_data, "
+            . "descricao='$salva_descricao', litros='$salva_litros', tipo='$salva_tipo', peso='$salva_peso', valoruni='$salva_valoruni' WHERE idproduto = $idproduto");
 
     echo 'OPERAÇÃO BEM SUCEDIDA';
 }
