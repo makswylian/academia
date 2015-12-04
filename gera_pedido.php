@@ -56,20 +56,20 @@ if (isset($_POST) && count($_POST) > 0) {
         return;
     }
     if (trim($salva_idcliente) == "") {
-        echo 'Sem Data de Nascimento.';
-        return;
-    }
-    if (trim($salva_qntd) == "") {
-        echo 'Sem Quantidade.';
+        echo 'Sem Código do Cliente.';
         return;
     }
     if (trim($salva_idproduto) == "") {
         echo 'Sem Código do Produto.';
         return;
     }
+    if (trim($salva_qntd) == "") {
+        echo 'Sem Quantidade.';
+        return;
+    }
 
-    $sql_gravar = mysql_query("INSERT INTO pedido (iduser, idcliente, idproduto,vlruni, qntd,vlrtotal,descc,data) "
-            . "value ('$salva_iduser','$salva_idcliente','$salva_idproduto','$salva_vlruni','$salva_vlrtotal','$salva_descc'.'$salva_data')");
+
+    $sql_gravar = mysql_query("INSERT INTO pedido (iduser, idcliente, idproduto, vlruni, qntd, vlrtotal, descc, data) value ($salva_iduser,$salva_idcliente,$salva_idproduto,$salva_vlruni,$salva_qntd,$salva_vlrtotal,'$salva_descc'.$salva_data)");
 
     echo 'OPERAÇÃO BEM SUCEDIDA';
 }

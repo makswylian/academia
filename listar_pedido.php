@@ -7,7 +7,7 @@ $pedidos = $produtos->getPedidos();
 <form name="form_user" method="post" action="?ps=listar_pedido">
     <table border=1 cellspacing=0 cellpadding=2 bordercolor="#620f0f"> 
         <tr>
-            <td class="titulo" colspan="10" align="center">Pedidos</td>
+            <td class="titulo" colspan="8" align="center">Pedidos</td>
         </tr>
         <tr>
             <th>

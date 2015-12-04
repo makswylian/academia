@@ -6,11 +6,6 @@ if (!$isAdmin) {
     exit();
 }
 
-include_once('classe/AcademiaDao.php');
-$id = $_GET["iduser"];
-$usuario = new AcademiaDao();
-$usuario = $usuario->getIduser($id);
-
 
 include_once('classe/AcademiaDao.php');
 
