@@ -12,6 +12,10 @@
             <td><input type="int" name="idcliente" value="" maxlength="20"></td>
         </tr>
         <tr>
+            <td><label>Códido Produto: </label></td>
+            <td><input type="int" name="idproduto" value="" maxlength="20"></td>
+        </tr>
+        <tr>
             <td><label>Valor Unitário: </label></td>
             <td><input id="vlr_unit" type="text" name="vlruni" value="" maxlength="20"></td>
         </tr>
@@ -38,31 +42,33 @@
 <?php
 if (isset($_POST) && count($_POST) > 0) {
 
-    $salva_nome = $_POST['nome'];
-    $salva_dtnasc = $_POST['dtnasc'];
-    $salva_telefone = $_POST['telefone'];
-    $salva_email = $_POST['email'];
-    $salva_obs = $_POST['obs'];
+    $salva_iduser = $_POST['iduser'];
+    $salva_idcliente = $_POST['idcliente'];
+    $salva_idproduto = $_POST['idproduto'];
+    $salva_vlruni = $_POST['vlruni'];
+    $salva_qntd = $_POST['qntd'];
+    $salva_descc = $_POST['descc'];
+    $salva_data = $_POST['data'];
     //Validar valores vazio.
-    if (trim($salva_nome) == "") {
-        echo 'Sem Nome.';
+    if (trim($salva_iduser) == "") {
+        echo 'Sem Código do Usuário.';
         return;
     }
-    if (trim($salva_dtnasc) == "") {
+    if (trim($salva_idcliente) == "") {
         echo 'Sem Data de Nascimento.';
         return;
     }
-    if (trim($salva_telefone) == "") {
-        echo 'Sem Telefone.';
+    if (trim($salva_qntd) == "") {
+        echo 'Sem Quantidade.';
         return;
     }
-    if (trim($salva_email) == "") {
-        echo 'Sem Email.';
+    if (trim($salva_idproduto) == "") {
+        echo 'Sem Código do Produto.';
         return;
     }
 
-    $sql_gravar = mysql_query("INSERT INTO cliente (nome, dtnasc, fone, email, obs) "
-            . "value ('$salva_nome','$salva_dtnasc','$salva_telefone','$salva_email','$salva_obs')");
+    $sql_gravar = mysql_query("INSERT INTO pedido (iduser, idcliente, idproduto,vlruni, qntd,descc,data) "
+            . "value ('$salva_iduser','$salva_idcliente','$salva_idproduto','$salva_vlruni','$salva_descc'.'$salva_data')");
 
     echo 'OPERAÇÃO BEM SUCEDIDA';
 }

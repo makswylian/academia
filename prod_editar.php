@@ -84,8 +84,8 @@ if (isset($_POST) && count($_POST) > 0) {
         return;
     }
 
-    $sql_gravar = mysql_query("UPDATE produto SET idfornecedor='$salva_idforn', nome='$salva_nome',datavali=$salva_data, "
-            . "descricao='$salva_descricao', litros='$salva_litros', tipo='$salva_tipo', peso='$salva_peso', valoruni='$salva_valoruni' WHERE idproduto = $idproduto");
+    $sql_gravar = mysql_query( "UPDATE produto SET idfornecedor='$salva_idforn', nome='$salva_nome',datavali=$salva_data, "
+    . "descricao='$salva_descricao', litros='$salva_litros', tipo='$salva_tipo', peso='$salva_peso', valoruni='$salva_valoruni' WHERE idproduto = $idproduto");
 
     echo 'OPERAÇÃO BEM SUCEDIDA';
 }
