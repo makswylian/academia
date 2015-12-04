@@ -24,7 +24,7 @@
             <td><input id="quantidade" type="text" name="qntd" value="" onblur="setarTotal()" maxlength="20"></td>
         <tr>
             <td><label>Valor Total: </label></td>
-            <td><input id="vlr_total" type="text" name="obs" value="0,00" disabled></td>
+            <td><input id="vlr_total" type="text" name="vlrtotal" value="0,00" disabled></td>
         </tr>
         <tr>
             <td><label>Descrição: </label></td>
@@ -47,6 +47,7 @@ if (isset($_POST) && count($_POST) > 0) {
     $salva_idproduto = $_POST['idproduto'];
     $salva_vlruni = $_POST['vlruni'];
     $salva_qntd = $_POST['qntd'];
+    $salva_vlrtotal = $_POST['vlrtotal'];
     $salva_descc = $_POST['descc'];
     $salva_data = $_POST['data'];
     //Validar valores vazio.
@@ -67,8 +68,8 @@ if (isset($_POST) && count($_POST) > 0) {
         return;
     }
 
-    $sql_gravar = mysql_query("INSERT INTO pedido (iduser, idcliente, idproduto,vlruni, qntd,descc,data) "
-            . "value ('$salva_iduser','$salva_idcliente','$salva_idproduto','$salva_vlruni','$salva_descc'.'$salva_data')");
+    $sql_gravar = mysql_query("INSERT INTO pedido (iduser, idcliente, idproduto,vlruni, qntd,vlrtotal,descc,data) "
+            . "value ('$salva_iduser','$salva_idcliente','$salva_idproduto','$salva_vlruni','$salva_vlrtotal','$salva_descc'.'$salva_data')");
 
     echo 'OPERAÇÃO BEM SUCEDIDA';
 }

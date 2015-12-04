@@ -51,7 +51,7 @@
             <div class="col_1">
                 <ul class="simple">
                     <li><a href="?ps=gera_pedido">Gerar</a></li>
-                    <li><a href="#">Consulta</a></li>
+                    <li><a href="?ps=listar_pedido">Consulta</a></li>
                 </ul>
             </div>   
         </div> 

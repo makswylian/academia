@@ -80,4 +80,19 @@ class AcademiaDao {
         mysql_close();
         return $retorno[0];
     }
+    function getPedidos() {
+
+        $re = mysql_query("select * from usuario order by idpedido");
+
+        if (mysql_errno() != 0) {
+            return NULL;
+        }
+
+        while ($l = mysql_fetch_array($re)) {
+            $retorno[] = $l;
+        }
+
+        mysql_close();
+        return $retorno;
+    }
 }
