@@ -95,4 +95,34 @@ class AcademiaDao {
         mysql_close();
         return $retorno;
     }
+    function getPedido() {
+
+        $re = mysql_query("select * from pedido order by idpedido");
+
+        if (mysql_errno() != 0) {
+            return NULL;
+        }
+
+        while ($l = mysql_fetch_array($re)) {
+            $retorno[] = $l;
+        }
+
+        mysql_close();
+        return $retorno;
+    }
+    function getIdpedido($id) {
+
+        $re = mysql_query("select * from pedido where idpedido = $id");	
+
+        if (mysql_errno() != 0) {
+            return NULL;
+        }
+
+        while ($l = mysql_fetch_array($re)) {
+            $retorno[] = $l;
+        }
+
+        mysql_close();
+        return $retorno[0];
+    }
 }
