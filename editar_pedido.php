@@ -10,39 +10,52 @@ $pedido = $pedido->getIdpedido($id);
     <table border=1 cellspacing=0 cellpadding=2 bordercolor="#620f0f"> 
 
         <tr>
-            <td>Nome:</td>
-            <td><input name="nome" type="text" maxlength="19" value="<?= $usuario["nome"] ?>" /></td>
+            <td><label>Códido do Usuário: </label></td>
+            <td><input type="int" name="iduser" value="" maxlength="20"><?= $value["iduser"]; ?></td>
         </tr>
         <tr>
-            <td>Usuário:</td>
-            <td><input name="usuario" type="text" maxlength="30" value="<?= $usuario["usuario"] ?>" /></td>
+            <td><label>Códido Cliente: </label></td>
+            <td><input type="int" name="idcliente" value="" maxlength="20"><?= $value["idcliente"]; ?></td>
         </tr>
         <tr>
-            <td>Email:</td>
-            <td><input name="email" type="text" maxlength="50" value="<?= $usuario["email"] ?>" /></td>
+            <td><label>Códido Produto: </label></td>
+            <td><input type="int" name="idproduto" value="" maxlength="20"><?= $value["idproduto"]; ?></td>
         </tr>
         <tr>
-            <td>Senha:</td>
-            <td><input name="senha" type="password" maxlength="50"  value="<?= $usuario["senha"] ?>" /></td>
+            <td><label>Valor Unitário: </label></td>
+            <td><input id="vlr_unit" type="text" name="vlruni" value="" maxlength="20"><?= $value["vlruni"]; ?></td>
         </tr>
         <tr>
-            <td>Nivel:</td>
-            <td><input name="nivel" type="text" maxlength="1" value="<?= $usuario["nivel"] ?>" /></td>
+            <td><label>Quantidade: </label></td>
+            <td><input id="quantidade" type="text" name="qtde" value="" onblur="setarTotal()" maxlength="20"><?= $value["qtde"]; ?></td>
+        <tr>
+            <td><label>Valor Total: </label></td>
+            <td><input id="vlr_total" type="text" name="vlrtotal" value="0,00" readonly="true"><?= $value["vlrtotal"]; ?></td>
+        </tr>
+        <tr>
+            <td><label>Status: </label></td>
+            <td><input type="int" name="status" value="" maxlength="40"><?= $value["status"]; ?></td>
+        </tr>
+        <tr>
+            <td><label>Data do Pedido: </label></td>
+            <td><input type="date" name="data" value=""></td>
         </tr>
     </table>
-    <input type="hidden" name="idusuario" value="<?= $_GET["iduser"]; ?>">
+    <input type="hidden" name="idpedido" value="<?= $_GET["idpedido"]; ?>">
     <input type="submit" class="form_bt" value="Salvar Edição"   />
 </form>
 
 <?php
 if (isset($_POST) && count($_POST) > 0) {
 
-    $salva_nome = $_POST['nome'];
-    $salva_email = $_POST['email'];
-    $salva_usuario = $_POST['usuario'];
-    $salva_senha = $_POST['senha'];
-    $salva_nivel = $_POST ['nivel'];
-    $idusuario = $_POST ['idusuario'];
+    $salva_nome = $_POST['iduser'];
+    $salva_email = $_POST['idcliente'];
+    $salva_usuario = $_POST['idproduto'];
+    $salva_senha = $_POST['vlruni'];
+    $salva_nivel = $_POST ['qtde'];
+    $idusuario = $_POST ['status'];
+    $idusuario = $_POST ['data'];
+
 
 //Validar valores vazio.
     if (trim($salva_nome) == "") {
