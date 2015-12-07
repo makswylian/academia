@@ -38,12 +38,12 @@ $usuarios = $usuarios->getUsuarios();
         </tr>
         <?php foreach ($usuarios as $value) { ?>
             <tr> 
-                <td><?= $value["iduser"] ?></td>
-                <td><?= $value["nome"] ?></td>
-                <td><?= $value["usuario"] ?></td>
-                <td><?= $value["email"] ?></td>
-                <td><?= $value["nivel"] ?></td>
-                <td><a href="?ps=usuario_editar&iduser=<?= $value["iduser"] ?>"  class="ion-edit"></a></td>
+                <td align="center"><?= $value["iduser"] ?></td>
+                <td align="center"><?= $value["nome"] ?></td>
+                <td align="center"><?= $value["usuario"] ?></td>
+                <td align="center"><?= $value["email"] ?></td>
+                <td align="center"><?= $value["nivel"] ?></td>
+                <td align="center"><a href="?ps=usuario_editar&iduser=<?= $value["iduser"] ?>"  class="ion-edit"></a></td>
             </tr>
         <?php } ?>
 

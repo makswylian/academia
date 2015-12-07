@@ -48,31 +48,45 @@ $pedido = $pedido->getIdpedido($id);
 <?php
 if (isset($_POST) && count($_POST) > 0) {
 
-    $salva_nome = $_POST['iduser'];
-    $salva_email = $_POST['idcliente'];
-    $salva_usuario = $_POST['idproduto'];
-    $salva_senha = $_POST['vlruni'];
-    $salva_nivel = $_POST ['qtde'];
-    $idusuario = $_POST ['status'];
-    $idusuario = $_POST ['data'];
+    $salva_iduser = $_POST['iduser'];
+    $salva_idcliente = $_POST['idcliente'];
+    $salva_idproduto = $_POST['idproduto'];
+    $salva_vlruni = $_POST['vlruni'];
+    $salva_qtde = $_POST ['qtde'];
+    $salva_status = $_POST ['vlrtotal'];
+    $salva_status = $_POST ['status'];
+    $salva_status = $_POST ['data'];
+    $idpedido = $_POST ['idpedido'];
 
 
 //Validar valores vazio.
-    if (trim($salva_nome) == "") {
-        echo 'Sem Nome.';
+    if (trim($salva_iduser) == "") {
+        echo 'Sem Código do Usuário .';
         return;
     }
-    if (trim($salva_usuario) == "") {
-        echo 'Sem Usuário.';
+    if (trim($salva_idcliente) == "") {
+        echo 'Sem Código do Cliente.';
         return;
     }
-    if (trim($salva_senha) == "") {
-        echo 'Sem Senha.';
+    if (trim($salva_idproduto) == "") {
+        echo 'Sem Código do Produto.';
+        return;
+    }
+    if (trim($salva_vlruni) == "") {
+        echo 'Sem Valor Unitário.';
+        return;
+    }
+    if (trim($salva_qtde) == "") {
+        echo 'Sem Quantidade.';
+        return;
+    }
+    if (trim($salva_status) == "") {
+        echo 'Sem Status.';
         return;
     }
 
     $sql_gravar = mysql_query("UPDATE usuario SET nome='$salva_nome',email='$salva_email', "
-            . "usuario='$salva_usuario', senha='$salva_senha', nivel='$salva_nivel' WHERE iduser=$idusuario");
+            . "usuario='$salva_usuario', senha='$salva_senha', nivel='$salva_nivel' WHERE iduser=$idpedido");
     echo 'OPERAÇÃO BEM SUCEDIDA';
 }
 ?>

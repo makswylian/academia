@@ -42,15 +42,15 @@ $produtos = $produtos->getProdutos();
         </tr>
         <?php foreach ($produtos as $value) { ?>
             <tr> 
-                <td><?= $value["idproduto"]; ?></td>
-                <td><?= $value["idfornecedor"]; ?></td>
-                <td><?= $value["nome"]; ?></td>
-                <td><?= $value["datavali"]; ?></td>
-                <td><?= $value["descricao"]; ?></td>
-                <td><?= $value["litros"]; ?></td>
-                <td><?= $value["tipo"]; ?></td>
-                <td><?= $value["peso"]; ?></td>
-                <td><?= 'R$ ' . number_format($value["valoruni"], 2, ',', '.'); ?></td>
+                <td align="center"><?= $value["idproduto"]; ?></td>
+                <td align="center"><?= $value["idfornecedor"]; ?></td>
+                <td align="center"><?= $value["nome"]; ?></td>
+                <td align="center"><?= $value["datavali"]; ?></td>
+                <td align="center"><?= $value["descricao"]; ?></td>
+                <td align="center"><?= $value["litros"]; ?></td>
+                <td align="center"><?= $value["tipo"]; ?></td>
+                <td align="center"><?= $value["peso"]; ?></td>
+                <td align="center"><?= 'R$ ' . number_format($value["valoruni"], 2, ',', '.'); ?></td>
                 <td><a href="?ps=prod_editar&idprod=<?= $value["idproduto"]; ?>"  class="ion-edit"></a></td>
             </tr>
         <?php } ?>
