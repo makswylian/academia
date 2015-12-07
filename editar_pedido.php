@@ -1,8 +1,8 @@
 <?php
 include_once('classe/AcademiaDao.php');
-$id = $_GET["iduser"];
-$usuario = new AcademiaDao();
-$usuario = $usuario->getIduser($id);
+$id = $_GET["idpedido"];
+$pedido = new AcademiaDao();
+$pedido = $pedido->getIdpedido($id);
 ?>
 <form name="form_user" method="post" action="?ps=editar_pedido">
 

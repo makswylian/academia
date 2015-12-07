@@ -35,9 +35,10 @@ class AcademiaDao {
         mysql_close();
         return $retorno;
     }
+
     function getIduser($id) {
 
-        $re = mysql_query("select * from usuario where iduser = $id");	
+        $re = mysql_query("select * from usuario where iduser = $id");
 
         if (mysql_errno() != 0) {
             return NULL;
@@ -50,7 +51,8 @@ class AcademiaDao {
         mysql_close();
         return $retorno[0];
     }
-      function getProdutos() {
+
+    function getProdutos() {
 
         $re = mysql_query("select * from produtos order by idproduto");
 
@@ -65,9 +67,10 @@ class AcademiaDao {
         mysql_close();
         return $retorno;
     }
-   function getIdproduto($idproduto) {
 
-        $re = mysql_query("select * from produtos where idproduto = $idproduto");	
+    function getIdproduto($idproduto) {
+
+        $re = mysql_query("select * from produtos where idproduto = $idproduto");
 
         if (mysql_errno() != 0) {
             return NULL;
@@ -80,6 +83,7 @@ class AcademiaDao {
         mysql_close();
         return $retorno[0];
     }
+
     function getPedidos() {
 
         $re = mysql_query("select * from pedido order by idpedido");
@@ -95,24 +99,10 @@ class AcademiaDao {
         mysql_close();
         return $retorno;
     }
-    function getPedido() {
 
-        $re = mysql_query("select * from pedido order by idpedido");
-
-        if (mysql_errno() != 0) {
-            return NULL;
-        }
-
-        while ($l = mysql_fetch_array($re)) {
-            $retorno[] = $l;
-        }
-
-        mysql_close();
-        return $retorno;
-    }
     function getIdpedido($id) {
 
-        $re = mysql_query("select * from pedido where idpedido = $id");	
+        $re = mysql_query("select * from pedido where idpedido = $id");
 
         if (mysql_errno() != 0) {
             return NULL;
@@ -125,4 +115,5 @@ class AcademiaDao {
         mysql_close();
         return $retorno[0];
     }
+
 }
