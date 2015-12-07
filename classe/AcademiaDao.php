@@ -82,7 +82,7 @@ class AcademiaDao {
     }
     function getPedidos() {
 
-        $re = mysql_query("select * from usuario order by idpedido");
+        $re = mysql_query("select * from pedido order by idpedido");
 
         if (mysql_errno() != 0) {
             return NULL;

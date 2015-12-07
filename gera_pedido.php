@@ -29,7 +29,7 @@
         <tr>
             <td><label>Descrição: </label></td>
             <td><input type="int" name="descc" value="" maxlength="40"></td>
-        </tr>
+        </tr>05
         <tr>
             <td><label>Data do Pedido: </label></td>
             <td><input type="date" name="data" value=""></td>
