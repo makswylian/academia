@@ -21,14 +21,14 @@
         </tr>
         <tr>
             <td><label>Quantidade: </label></td>
-            <td><input id="quantidade" type="text" name="qntd" value="" onblur="setarTotal()" maxlength="20"></td>
+            <td><input id="quantidade" type="text" name="qtde" value="" onblur="setarTotal()" maxlength="20"></td>
         <tr>
             <td><label>Valor Total: </label></td>
-            <td><input id="vlr_total" type="text" name="vlrtotal" value="0,00" disabled></td>
+            <td><input id="vlr_total" type="text" name="vlrtotal" value="0,00" readonly="true"></td>
         </tr>
         <tr>
-            <td><label>Descrição: </label></td>
-            <td><input type="int" name="descc" value="" maxlength="40"></td>
+            <td><label>Status: </label></td>
+            <td><input type="int" name="status" value="" maxlength="40"></td>
         </tr>
         <tr>
             <td><label>Data do Pedido: </label></td>
@@ -48,7 +48,7 @@ if (isset($_POST) && count($_POST) > 0) {
     $salva_vlruni = $_POST['vlruni'];
     $salva_qtde = $_POST['qtde'];
     $salva_vlrtotal = $_POST['vlrtotal'];
-    $salva_descc = $_POST['descc'];
+    $salva_status = $_POST['status'];
     $salva_data = $_POST['data'];
     //Validar valores vazio.
     if (trim($salva_iduser) == "") {
@@ -63,14 +63,16 @@ if (isset($_POST) && count($_POST) > 0) {
         echo 'Sem Código do Produto.';
         return;
     }
-    if (trim($salva_qntd) == "") {
+    if (trim($salva_qtde) == "") {
         echo 'Sem Quantidade.';
         return;
     }
 
 
-    $sql_gravar = mysql_query("INSERT INTO pedido (iduser, idcliente, qtde, vlruni,  vlrtotal, descc, data, idproduto) value ($salva_iduser,$salva_idcliente,$salva_qtde,$salva_vlruni,$salva_vlrtotal,'$salva_descc'.$salva_data, $salva_idproduto)");
-
+    $sql_gravar = mysql_query("INSERT INTO pedido (iduser, idcliente, qtde , status, vlruni,  vlrtotal, data, idproduto) value ($salva_iduser,$salva_idcliente,$salva_qtde ,'$salva_status',$salva_vlruni,$salva_vlrtotal,$salva_data, $salva_idproduto)");
+if (mysql_error()){
+    echo mysql_error();
+}
     echo 'OPERAÇÃO BEM SUCEDIDA';
 }
 ?>
