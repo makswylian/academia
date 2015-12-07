@@ -2,12 +2,12 @@
 include_once('classe/AcademiaDao.php');
 
 $pedidos = new AcademiaDao();
-$pedidos = $produtos->getPedidos();
+$pedidos = $pedidos->getPedidos();
 ?>
 <form name="form_user" method="post" action="?ps=listar_pedido">
     <table border=1 cellspacing=0 cellpadding=2 bordercolor="#620f0f"> 
         <tr>
-            <td class="titulo" colspan="8" align="center">Pedidos</td>
+            <td class="titulo" colspan="9" align="center">Pedidos</td>
         </tr>
         <tr>
             <th>
@@ -19,6 +19,9 @@ $pedidos = $produtos->getPedidos();
             <th>
                 Código do Produto
             </th>
+            <th>
+                Valor Unitário            
+            </th> 
             <th>
                 Quantidade             
             </th>          
@@ -40,11 +43,11 @@ $pedidos = $produtos->getPedidos();
                 <td><?= $value["idpedido"]; ?></td>
                 <td><?= $value["idcliente"]; ?></td>
                 <td><?= $value["idproduto"]; ?></td>
-                <td><?= $value["vlruni"]; ?></td>
-                <td><?= $value["qntd"]; ?></td>
+                <td><?= 'R$ ' . number_format($value["vlruni"], 2, ',', '.'); ?></td>
+                <td><?= $value["qtde"]; ?></td>
                 <td><?= 'R$ ' . number_format($value["vlrtotal"], 2, ',', '.'); ?></td>
                 <td><?= $value["descc"]; ?></td>
-                <td><?= $value["peso"]; ?></td>
+                <td><?= $value["data"]; ?></td>
                 <td><a href="?ps=pedido_editar&idpedido=<?= $value["idpedido"]; ?>"  class="ion-edit"></a></td>
             </tr>
         <?php } ?>
