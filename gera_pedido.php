@@ -68,8 +68,8 @@ if (isset($_POST) && count($_POST) > 0) {
         return;
     }
 
-
-    $sql_gravar = mysql_query("INSERT INTO pedido (iduser, idcliente, qtde , status, vlruni,  vlrtotal, data, idproduto) value ($salva_iduser,$salva_idcliente,$salva_qtde ,'$salva_status',$salva_vlruni,$salva_vlrtotal,$salva_data, $salva_idproduto)");
+    $queryInsert = "INSERT INTO pedido (iduser, idcliente, qtde , status, vlruni,  vlrtotal, data, idproduto) value ($salva_iduser,$salva_idcliente,$salva_qtde ,'$salva_status',$salva_vlruni,$salva_vlrtotal,'$salva_data', $salva_idproduto)";
+    $sql_gravar = mysql_query($queryInsert);
 if (mysql_error()){
     echo mysql_error();
 }

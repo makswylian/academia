@@ -11,34 +11,34 @@ $pedido = $pedido->getIdpedido($id);
 
         <tr>
             <td><label>Códido do Usuário: </label></td>
-            <td><input type="int" name="iduser" value="<?= $value["iduser"]; ?>" maxlength="20"></td>
+            <td><input type="int" name="iduser" maxlength="20" value="<?= $pedido["iduser"]; ?>" ></td>
         </tr>
         <tr>
             <td><label>Códido Cliente: </label></td>
-            <td><input type="int" name="idcliente" value="<?= $value["idcliente"]; ?>" maxlength="20"></td>
+            <td><input type="int" name="idcliente" maxlength="20" value="<?= $pedido["idcliente"]; ?>" ></td>
         </tr>
         <tr>
             <td><label>Códido Produto: </label></td>
-            <td><input type="int" name="idproduto" value="<?= $value["idproduto"]; ?>" maxlength="20"></td>
+            <td><input type="int" name="idproduto" maxlength="20" value="<?= $pedido["idproduto"]; ?>" ></td>
         </tr>
         <tr>
             <td><label>Valor Unitário: </label></td>
-            <td><input id="vlr_unit" type="text" name="vlruni" value="<?= $value["vlruni"]; ?>" maxlength="20"></td>
+            <td><input id="vlr_unit" type="text" name="vlruni" maxlength="20" value="<?= $pedido["vlruni"]; ?>" ></td>
         </tr>
         <tr>
             <td><label>Quantidade: </label></td>
-            <td><input id="quantidade" type="text" name="qtde" value="<?= $value["qtde"]; ?>" onblur="setarTotal()" maxlength="20"></td>
+            <td><input id="quantidade" type="text" name="qtde" maxlength="20" value="<?= $pedido["qtde"]; ?>" onblur="setarTotal()"></td>
         <tr>
             <td><label>Valor Total: </label></td>
-            <td><input id="vlr_total" type="text" name="vlrtotal" value="<?= $value["vlrtotal"]; ?>" readonly="true"></td>
+            <td><input id="vlr_total" type="text" name="vlrtotal" value="<?= $pedido["vlrtotal"]; ?>" readonly="true"></td>
         </tr>
         <tr>
             <td><label>Status: </label></td>
-            <td><input type="int" name="status" value="<?= $value["status"]; ?>" maxlength="40"></td>
+            <td><input type="int" name="status" maxlength="40" value="<?= $pedido["status"]; ?>" ></td>
         </tr>
         <tr>
             <td><label>Data do Pedido: </label></td>
-            <td><input type="date" name="data" value="<?= $value["data"]; ?>"></td>
+            <td><input type="date" name="data" value="<?= $pedido["data"]; ?>"></td>
         </tr>
     </table>
     <input type="hidden" name="idpedido" value="<?= $_GET["idpedido"]; ?>">
@@ -85,9 +85,12 @@ if (isset($_POST) && count($_POST) > 0) {
         return;
     }
 
-    $sql_gravar = mysql_query("UPDATE pedido SET iduser='$salva_iduser',idcliente='$salva_idcliente', "
-            . "idproduto='$salva_idproduto', vlruni='$salva_vlruni', qtde='$salva_qtde', vlrtotal='$salva_vlrtotal',"
+    $sql_gravar = mysql_query("UPDATE pedido SET iduser=$salva_iduser,idcliente=$salva_idcliente, "
+            . "idproduto=$salva_idproduto, vlruni=$salva_vlruni, qtde=$salva_qtde, vlrtotal=$salva_vlrtotal,"
             . " status='$salva_status', data='$salva_data' WHERE iduser=$idpedido");
+    if (mysql_error()) {
+        echo mysql_error();
+    }
     echo 'OPERAÇÃO BEM SUCEDIDA';
 }
 ?>
