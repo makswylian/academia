@@ -48,7 +48,7 @@ $pedidos = $pedidos->getPedidos();
                 <td align="center"><?= 'R$ ' . number_format($value["vlrtotal"], 2, ',', '.'); ?></td>
                 <td align="center"><?= $value["status"]; ?></td>
                 <td align="center"><?= $value["data"]; ?></td>
-                <td align="center"><a href="?ps=pedido_editar&idpedido=<?= $value["idpedido"]; ?>"  class="ion-edit"></a></td>
+                <td align="center"><a href="?ps=editar_pedido&idpedido=<?= $value["idpedido"]; ?>"  class="ion-edit"></a></td>
             </tr>
         <?php } ?>
 
